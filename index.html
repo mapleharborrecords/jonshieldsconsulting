@@ -7,10 +7,6 @@
   <title>Jon Shields | Higher Education Compliance & Operations Consulting</title>
   <meta name="description" content="Boutique consulting for higher education institutions. Compliance systems, accreditation readiness, student services operations, and workflow design." />
 
-  <!-- SEO / Social -->
-  <meta property="og:title" content="Jon Shields Consulting" />
-  <meta property="og:description" content="Higher Education Compliance & Operations Consulting" />
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -47,7 +43,6 @@
 
     a{ color:var(--accent); text-decoration:none; }
 
-    /* NAV */
     .nav{
       display:flex;
       justify-content:space-between;
@@ -64,9 +59,8 @@
     .nav a{ margin-left:18px; color:var(--muted); font-size:14px; }
     .nav a:hover{ color:var(--text); }
 
-    .brand{ font-weight:600; letter-spacing:-0.02em; }
+    .brand{ font-weight:600; }
 
-    /* HERO */
     .hero{
       max-width:1000px;
       margin:0 auto;
@@ -115,6 +109,7 @@
       background:var(--panel);
       color:var(--text);
       font-weight:500;
+      display:inline-block;
     }
 
     .btn.primary{
@@ -132,12 +127,10 @@
     h2{
       font-size:28px;
       margin-bottom:14px;
-      letter-spacing:-0.02em;
     }
 
     .muted{ color:var(--muted); }
 
-    /* GRID */
     .grid{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
@@ -151,36 +144,23 @@
       border-radius:16px;
       padding:20px;
       box-shadow:var(--shadow);
+      display:flex;
+      flex-direction:column;
+      gap:10px;
     }
 
     .tag{
       display:inline-block;
-      margin-top:10px;
       font-size:12px;
       padding:4px 10px;
       border-radius:999px;
       background:rgba(34,197,94,0.1);
       color:var(--accent2);
+      margin-top:auto;
     }
 
-    /* CASE STUDIES */
-    .case{
-      border-left:2px solid var(--accent);
-      padding-left:16px;
-      margin-top:14px;
-    }
+    .case{ padding-left:14px; border-left:2px solid var(--accent); }
 
-    /* FILTER BOX */
-    .filter{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:18px;
-    }
-
-    .good{ color:#22c55e; }
-    .bad{ color:#ef4444; }
-
-    /* PRICING */
     .pricing{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
@@ -193,6 +173,11 @@
       margin:10px 0;
     }
 
+    .btn.block{
+      margin-top:10px;
+      text-align:center;
+    }
+
     footer{
       text-align:center;
       padding:60px 20px;
@@ -203,7 +188,6 @@
 
 <body>
 
-<!-- NAV -->
 <div class="nav">
   <div class="brand">Jon Shields Consulting</div>
   <div>
@@ -214,110 +198,18 @@
   </div>
 </div>
 
-<!-- HERO -->
 <div class="hero">
-  <h1>Boutique Systems Consulting for Higher Education</h1>
-  <p class="sub">
-    I help small colleges and creative institutions build compliance systems, stabilize operations,
-    and eliminate administrative breakdowns.
-  </p>
+  <h1>Boutique Higher Education Consulting</h1>
+  <p class="sub">Compliance systems, operations design, and student services optimization for small institutions.</p>
 
-  <div class="pill">Engagements typically $750–$3,000+ depending on scope</div>
+  <div class="pill">Engagements start at $750</div>
 
   <div class="cta">
-    <a class="btn primary" href="#book">Book a Consultation</a>
+    <a class="btn primary" href="#book">Book Consultation</a>
     <a class="btn" href="#pricing">View Pricing</a>
-    <a class="btn" href="https://jonshields.org">Creative Work</a>
   </div>
 </div>
 
-<!-- BOOKING -->
-<section id="book">
-  <h2>Book a Consultation</h2>
-  <p class="muted">Schedule a 30-minute consultation to assess your institution’s operational needs.</p>
-
-  <div class="card" style="margin-top:20px;">
-    <div class="calendly-inline-widget" data-url="https://calendly.com/jonshieldsconsulting/consultation" style="min-width:320px;height:700px;"></div>
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section id="services">
-  <h2>Services</h2>
-  <div class="grid">
-
-    <div class="card">
-      <h3>Compliance Audit</h3>
-      <p class="muted">Review accreditation readiness, reporting systems, and documentation structure.</p>
-      <span class="tag">Risk & Systems Mapping</span>
-    </div>
-
-    <div class="card">
-      <h3>Operations Design</h3>
-      <p class="muted">Redesign student services workflows and internal communication systems.</p>
-      <span class="tag">Process Optimization</span>
-    </div>
-
-    <div class="card">
-      <h3>Retainer Advisory</h3>
-      <p class="muted">Ongoing support for compliance cycles and institutional operations.</p>
-      <span class="tag">Monthly Support</span>
-    </div>
-
-  </div>
-</section>
-
-<!-- CASE STUDIES -->
-<section id="cases">
-  <h2>Case Studies</h2>
-  <p class="muted">Examples of operational system improvements (representative scenarios).</p>
-
-  <div class="grid">
-
-    <div class="card">
-      <h3>Accreditation Workflow Overhaul</h3>
-      <div class="case">
-        Reduced reporting cycle chaos by centralizing documentation systems and implementing structured renewal workflows.
-      </div>
-    </div>
-
-    <div class="card">
-      <h3>Student Services System Design</h3>
-      <div class="case">
-        Improved retention tracking and communication flows across departments in a small creative institution.
-      </div>
-    </div>
-
-    <div class="card">
-      <h3>Administrative Risk Reduction</h3>
-      <div class="case">
-        Identified compliance gaps and built repeatable processes to reduce institutional audit risk.
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- QUALIFICATION FILTER -->
-<section>
-  <h2>Is This Right For You?</h2>
-
-  <div class="grid">
-
-    <div class="card">
-      <h3 class="good">Good Fit If…</h3>
-      <p class="muted">You run a small institution, creative program, or training school and lack structured compliance systems.</p>
-    </div>
-
-    <div class="card">
-      <h3 class="bad">Not a Fit If…</h3>
-      <p class="muted">You are looking for general administrative help or ad-hoc task outsourcing without systems improvement.</p>
-    </div>
-
-  </div>
-</section>
-
-<!-- PRICING -->
 <section id="pricing">
   <h2>Engagements</h2>
 
@@ -326,47 +218,40 @@
     <div class="card">
       <h3>Consultation</h3>
       <div class="price">$250</div>
-      <p class="muted">Initial systems review and recommendations.</p>
-      <a class="btn primary" href="#book">Book</a>
+      <p class="muted">Initial systems review.</p>
+      <a class="btn primary block" href="#book">Book</a>
     </div>
 
     <div class="card">
       <h3>Audit Engagement</h3>
       <div class="price">$750+</div>
-      <p class="muted">Full compliance and operations review.</p>
+      <p class="muted">Compliance + operations review.</p>
     </div>
 
     <div class="card">
       <h3>Systems Build</h3>
       <div class="price">$2,000+</div>
-      <p class="muted">Full workflow redesign and implementation.</p>
+      <p class="muted">Full workflow redesign.</p>
     </div>
 
   </div>
 </section>
 
-<!-- STRIPE PLACEHOLDER -->
-<section>
-  <h2>Start Here</h2>
+<section id="book">
+  <h2>Book a Consultation</h2>
   <div class="card">
-    <p class="muted">Pay for an initial consultation and begin your systems assessment immediately.</p>
-    <button class="btn primary" onclick="alert('Stripe integration placeholder - connect your product link here')">Pay $250 Consultation</button>
+    <div class="calendly-inline-widget" data-url="https://calendly.com/jonshieldsconsulting/consultation" style="min-width:320px;height:700px;"></div>
   </div>
 </section>
 
-<!-- CONTACT -->
 <section>
   <h2>Contact</h2>
   <div class="card">
     <p><strong>Email:</strong> <a href="mailto:jonshieldsconsulting@gmail.com">jonshieldsconsulting@gmail.com</a></p>
-    <p><strong>Creative Work:</strong> <a href="https://jonshields.org">jonshields.org</a></p>
-    <p><strong>Label:</strong> <a href="https://mapleharborrecords.com">mapleharborrecords.com</a></p>
   </div>
 </section>
 
-<footer>
-  © 2026 Jon Shields — Boutique Higher Education Systems Consulting
-</footer>
+<footer>© 2026 Jon Shields Consulting</footer>
 
 </body>
 </html>
