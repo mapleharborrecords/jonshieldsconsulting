@@ -11,7 +11,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <script src="https://js.stripe.com/v3/"></script>
   <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
   <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 
@@ -28,39 +27,36 @@
       --shadow: 0 20px 60px rgba(0,0,0,0.5);
     }
 
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:Inter, sans-serif;
-    }
+    *{margin:0;padding:0;box-sizing:border-box;font-family:Inter,sans-serif;}
 
     body{
-      background:radial-gradient(circle at top, #111827, var(--bg));
+      background:radial-gradient(circle at top,#111827,var(--bg));
       color:var(--text);
       line-height:1.6;
     }
 
-    a{ color:var(--accent); text-decoration:none; }
+    a{color:var(--accent);text-decoration:none;}
 
+    /* NAV */
     .nav{
       display:flex;
       justify-content:space-between;
       align-items:center;
-      padding:20px 40px;
+      padding:18px 40px;
       position:sticky;
       top:0;
       background:rgba(10,15,20,0.85);
-      backdrop-filter: blur(10px);
+      backdrop-filter:blur(10px);
       border-bottom:1px solid var(--border);
-      z-index:10;
+      z-index:100;
     }
 
-    .nav a{ margin-left:18px; color:var(--muted); font-size:14px; }
-    .nav a:hover{ color:var(--text); }
+    .nav a{margin-left:18px;color:var(--muted);font-size:14px;}
+    .nav a:hover{color:var(--text);}
 
-    .brand{ font-weight:600; }
+    .brand{font-weight:600;}
 
+    /* HERO */
     .hero{
       max-width:1000px;
       margin:0 auto;
@@ -68,175 +64,170 @@
       text-align:center;
     }
 
-    h1{
-      font-size:48px;
-      letter-spacing:-0.03em;
-      line-height:1.1;
-    }
+    h1{font-size:48px;letter-spacing:-0.03em;line-height:1.1;}
 
-    .sub{
-      margin-top:18px;
-      color:var(--muted);
-      max-width:720px;
-      margin-left:auto;
-      margin-right:auto;
-      font-size:18px;
-    }
+    .sub{margin-top:18px;color:var(--muted);max-width:720px;margin-left:auto;margin-right:auto;font-size:18px;}
 
     .pill{
-      display:inline-block;
-      margin-top:20px;
-      padding:6px 12px;
+      display:inline-block;margin-top:18px;padding:6px 12px;
       background:rgba(56,189,248,0.1);
       border:1px solid rgba(56,189,248,0.3);
       color:var(--accent);
-      border-radius:999px;
-      font-size:13px;
+      border-radius:999px;font-size:13px;
     }
 
-    .cta{
-      margin-top:28px;
-      display:flex;
-      gap:12px;
-      justify-content:center;
-      flex-wrap:wrap;
-    }
+    .cta{margin-top:26px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
 
     .btn{
-      padding:12px 16px;
-      border-radius:10px;
-      border:1px solid var(--border);
-      background:var(--panel);
-      color:var(--text);
-      font-weight:500;
-      display:inline-block;
+      padding:12px 16px;border-radius:10px;border:1px solid var(--border);
+      background:var(--panel);color:var(--text);font-weight:500;
     }
 
-    .btn.primary{
-      background:var(--accent);
-      color:#001018;
-      border:none;
-    }
+    .btn.primary{background:var(--accent);color:#001018;border:none;}
 
-    section{
-      max-width:1100px;
-      margin:0 auto;
-      padding:80px 20px;
-    }
+    section{max-width:1100px;margin:0 auto;padding:80px 20px;}
 
-    h2{
-      font-size:28px;
-      margin-bottom:14px;
-    }
+    h2{font-size:28px;margin-bottom:14px;}
 
-    .muted{ color:var(--muted); }
+    .muted{color:var(--muted);}
 
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-      gap:18px;
-      margin-top:20px;
-    }
+    /* GRID */
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-top:20px;}
 
     .card{
-      background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+      background:linear-gradient(180deg,rgba(255,255,255,0.03),rgba(255,255,255,0.01));
       border:1px solid var(--border);
       border-radius:16px;
       padding:20px;
       box-shadow:var(--shadow);
-      display:flex;
-      flex-direction:column;
-      gap:10px;
     }
 
-    .tag{
-      display:inline-block;
-      font-size:12px;
-      padding:4px 10px;
-      border-radius:999px;
-      background:rgba(34,197,94,0.1);
-      color:var(--accent2);
-      margin-top:auto;
-    }
+    .tag{display:inline-block;font-size:12px;padding:4px 10px;border-radius:999px;background:rgba(34,197,94,0.1);color:var(--accent2);margin-top:10px;}
 
-    .case{ padding-left:14px; border-left:2px solid var(--accent); }
+    /* QUALIFICATION */
+    .good{color:#22c55e;}
+    .bad{color:#ef4444;}
 
-    .pricing{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-      gap:18px;
-    }
+    /* PRICING */
+    .price{font-size:28px;font-weight:700;margin:10px 0;}
 
-    .price{
-      font-size:28px;
-      font-weight:700;
-      margin:10px 0;
-    }
-
-    .btn.block{
+    /* STRIPE */
+    .stripe-btn{
       margin-top:10px;
-      text-align:center;
-    }
-
-    footer{
-      text-align:center;
-      padding:60px 20px;
-      color:var(--muted);
+      padding:10px 14px;
+      background:#635bff;
+      border:none;
+      color:white;
+      border-radius:10px;
+      cursor:pointer;
+      width:100%;
     }
   </style>
 </head>
 
 <body>
 
+<!-- NAV -->
 <div class="nav">
   <div class="brand">Jon Shields Consulting</div>
   <div>
     <a href="#services">Services</a>
     <a href="#cases">Case Studies</a>
+    <a href="#fit">Fit</a>
     <a href="#pricing">Pricing</a>
     <a href="#book">Book</a>
   </div>
 </div>
 
+<!-- HERO -->
 <div class="hero">
-  <h1>Boutique Higher Education Consulting</h1>
+  <h1>Boutique Higher Education Systems Consulting</h1>
   <p class="sub">Compliance systems, operations design, and student services optimization for small institutions.</p>
-
-  <div class="pill">Engagements start at $750</div>
-
+  <div class="pill">Engagements $250–$3,000+</div>
   <div class="cta">
     <a class="btn primary" href="#book">Book Consultation</a>
-    <a class="btn" href="#pricing">View Pricing</a>
+    <a class="btn" href="#pricing">Pricing</a>
+    <a class="btn" href="#cases">Case Studies</a>
   </div>
 </div>
 
-<section id="pricing">
-  <h2>Engagements</h2>
-
-  <div class="pricing">
-
+<!-- SERVICES -->
+<section id="services">
+  <h2>Services</h2>
+  <div class="grid">
     <div class="card">
-      <h3>Consultation</h3>
-      <div class="price">$250</div>
-      <p class="muted">Initial systems review.</p>
-      <a class="btn primary block" href="#book">Book</a>
+      <h3>Compliance Audit</h3>
+      <p class="muted">Accreditation readiness + documentation systems review.</p>
+      <span class="tag">Risk Mapping</span>
     </div>
-
     <div class="card">
-      <h3>Audit Engagement</h3>
-      <div class="price">$750+</div>
-      <p class="muted">Compliance + operations review.</p>
+      <h3>Operations Design</h3>
+      <p class="muted">Workflow redesign for student services systems.</p>
+      <span class="tag">Systems Build</span>
     </div>
-
     <div class="card">
-      <h3>Systems Build</h3>
-      <div class="price">$2,000+</div>
-      <p class="muted">Full workflow redesign.</p>
+      <h3>Retainer Advisory</h3>
+      <p class="muted">Ongoing compliance + operational support.</p>
+      <span class="tag">Monthly Support</span>
     </div>
-
   </div>
 </section>
 
+<!-- CASE STUDIES -->
+<section id="cases">
+  <h2>Case Studies</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Accreditation Workflow Overhaul</h3>
+      <p class="muted">Centralized documentation and reduced reporting friction across departments.</p>
+    </div>
+    <div class="card">
+      <h3>Student Services Optimization</h3>
+      <p class="muted">Improved retention tracking and communication systems.</p>
+    </div>
+    <div class="card">
+      <h3>Compliance Risk Reduction</h3>
+      <p class="muted">Identified gaps and implemented repeatable audit systems.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FIT FILTER -->
+<section id="fit">
+  <h2>Is This Right For You?</h2>
+  <div class="grid">
+    <div class="card">
+      <h3 class="good">Good Fit</h3>
+      <p class="muted">Small colleges, creative schools, training programs needing structure.</p>
+    </div>
+    <div class="card">
+      <h3 class="bad">Not a Fit</h3>
+      <p class="muted">General admin help or one-off task outsourcing.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <h2>Pricing</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Consultation</h3>
+      <div class="price">$250</div>
+      <button class="stripe-btn" onclick="alert('Connect Stripe Checkout link here')">Pay & Book</button>
+    </div>
+    <div class="card">
+      <h3>Audit</h3>
+      <div class="price">$750+</div>
+    </div>
+    <div class="card">
+      <h3>Systems Build</h3>
+      <div class="price">$2,000+</div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOK -->
 <section id="book">
   <h2>Book a Consultation</h2>
   <div class="card">
@@ -244,6 +235,7 @@
   </div>
 </section>
 
+<!-- CONTACT -->
 <section>
   <h2>Contact</h2>
   <div class="card">
@@ -251,7 +243,9 @@
   </div>
 </section>
 
-<footer>© 2026 Jon Shields Consulting</footer>
+<footer style="text-align:center;padding:60px;color:var(--muted);">
+© 2026 Jon Shields Consulting
+</footer>
 
 </body>
 </html>
